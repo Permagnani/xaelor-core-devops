@@ -1,0 +1,11 @@
+# =========================================
+# Imagem do Banco de Dados MySQL - Projeto XAELOR_CORE
+# =========================================
+FROM mysql:8.0
+
+# Copia o script de DDL para a pasta de inicializacao do MySQL.
+# Tudo que estiver em /docker-entrypoint-initdb.d/ eh executado
+# automaticamente na PRIMEIRA vez que o container sobe (banco vazio)
+COPY ddl/schema.sql /docker-entrypoint-initdb.d/schema.sql
+
+EXPOSE 3306

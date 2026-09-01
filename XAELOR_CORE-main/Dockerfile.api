@@ -1,0 +1,38 @@
+
+# Build da aplicação com Maven
+
+FROM maven:3.9-eclipse-temurin-24 AS build
+
+WORKDIR /app
+
+# Copia primeiro o pom.xml para aproveitar cache de dependencias
+COPY pom.xml .
+RUN mvn dependency:go-offline -B
+
+# Copia o restante do codigo fonte e realiza o build
+COPY src ./src
+RUN mvn clean package -DskipTests -B
+
+
+# Imagem final de execucao
+
+FROM eclipse-temurin:24-jre
+
+WORKDIR /app
+
+# Cria um usuario e grupo sem privilegios administrativos
+RUN addgroup --system appgroup && \
+    adduser --system --ingroup appgroup appuser
+
+# Copia o .jar gerado na etapa de build
+COPY --from=build /app/target/*.jar app.jar
+
+# Garante que o usuario sem privilegios seja o dono do arquivo
+RUN chown appuser:appgroup app.jar
+
+# Troca para o usuario sem privilegios administrativos
+USER appuser
+
+EXPOSE 8082
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
