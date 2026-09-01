@@ -26,7 +26,7 @@ O projeto foi desenvolvido com arquitetura em camadas, utilizando **Spring Boot,
 
 ---
 
-# 🧴 Sobre o Projeto
+# Sobre o Projeto
 
 O **XAELOR CORE** é uma API REST responsável pelo gerenciamento de perfumes e matérias-primas.
 
@@ -66,7 +66,7 @@ Além da relação entre as entidades, esse recurso armazena informações como:
 
 ---
 
-# 🚀 Tecnologias
+# Tecnologias
 
 O projeto utiliza as seguintes tecnologias:
 
@@ -87,7 +87,7 @@ O projeto utiliza as seguintes tecnologias:
 
 ---
 
-# 🏗️ Arquitetura
+# Arquitetura
 
 O projeto utiliza uma arquitetura baseada em camadas:
 
@@ -176,7 +176,7 @@ podem ser utilizadas sem a necessidade de implementar manualmente SQL para essas
 
 ---
 
-# 🗄️ Modelo de Dados
+# Modelo de Dados
 
 O projeto possui três entidades principais.
 
@@ -219,7 +219,7 @@ O projeto possui três entidades principais.
 
 ---
 
-## 👃 Entidade Perfume
+## Entidade Perfume
 
 Tabela:
 
@@ -238,7 +238,7 @@ Campos principais:
 
 ---
 
-## 🧪 Entidade Matéria-Prima
+## Entidade Matéria-Prima
 
 Tabela:
 
@@ -268,7 +268,7 @@ unidade
 
 ---
 
-## 🔗 Entidade PerfumeMateriaPrima
+## Entidade PerfumeMateriaPrima
 
 Tabela:
 
@@ -291,7 +291,7 @@ Campos principais:
 
 ---
 
-# 📁 Estrutura do Projeto
+#  Estrutura do Projeto
 
 ```text
 src
@@ -333,7 +333,7 @@ src
 
 ---
 
-# ⚙️ Como Executar
+# Como Executar
 
 ## Pré-requisitos
 
@@ -380,7 +380,7 @@ http://localhost:8082
 
 ---
 
-# 🔄 CRUD
+#  CRUD
 
 CRUD é uma sigla para as quatro principais operações realizadas em um sistema que trabalha com dados:
 
@@ -395,7 +395,7 @@ No XAELOR CORE essas operações são implementadas através dos Controllers, Se
 
 ---
 
-## 📌 Fluxo do CRUD
+##  Fluxo do CRUD
 
 ```text
 POST /perfume
@@ -417,7 +417,7 @@ O mesmo conceito é utilizado para GET, PUT e DELETE.
 
 ---
 
-# 🧪 CRUD de Matéria-Prima
+#  CRUD de Matéria-Prima
 
 Endpoint base:
 
@@ -587,7 +587,7 @@ Quando a exclusão é realizada com sucesso:
 
 ---
 
-# 🌸 CRUD de Perfume
+# CRUD de Perfume
 
 Endpoint base:
 
@@ -695,7 +695,7 @@ Resposta de sucesso:
 
 ---
 
-# 🔗 CRUD de Perfume x Matéria-Prima
+#  CRUD de Perfume x Matéria-Prima
 
 Endpoint base:
 
